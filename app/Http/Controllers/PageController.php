@@ -15,4 +15,9 @@ class PageController extends Controller
         $title = "| About";
         return view('pages.about')->with('title',$title);
     }
+
+    public function contact() {
+        $title = "| Contact";
+        return view('pages.contact')->with('title',$title);
+    }
 }
