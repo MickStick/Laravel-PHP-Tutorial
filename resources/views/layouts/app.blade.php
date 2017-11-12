@@ -32,6 +32,7 @@
         </header>
         
         <div class="container">
+            @include('include.messages')
             @yield('content')
         </div>       
       
@@ -41,5 +42,6 @@
             $('.progress').animate({height:"toggle"}, 50);
         });
       </script>
+      @yield('script')
     </body>
 </html>

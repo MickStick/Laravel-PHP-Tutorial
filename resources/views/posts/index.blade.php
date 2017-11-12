@@ -6,14 +6,14 @@
     <ul class="collection">
         @foreach($posts as $post)
             
-                <li class="collection-item avatar">
+                <li class="collection-item avatar post-item">
                     <i class="material-icons green circle small">note</i>
-                        <span class="title" >
-                            <a href="/posts/{{$post->id}}" class="black-text waves-effect waves-teal" style="margin-top: 3mm !important;">
-                                <?php echo $post->title ?>
-                            </a>
-                        </span>
-                        <p class="truncate" style="width: 70% !important;">{{$post->body}}</p>
+                    <span class="title" >
+                        <a href="/posts/{{$post->id}}" class="black-text waves-effect waves-teal" style="margin-top: 3mm !important;">
+                            <?php echo $post->title ?>
+                        </a>
+                    </span>
+                    <div class="truncate post-preview" style="width: 70% !important; height: 19px !important;">{!! $post->body !!}</div>
                     <label class="secondary-content">
                         <span><?php echo $post->created_at ?></span>  
                     </label>
@@ -25,5 +25,6 @@
 @else
     <p>No Post As Yet</p>
 @endif
-
+<a href="posts/create" class="btn-floating hoverable right large green lighten-2 wave-effect waves-green"><i class="material-icons">add</i></a>
+<br><br><br><br>
 @endsection()

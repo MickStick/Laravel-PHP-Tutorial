@@ -14,7 +14,13 @@
 
     </span><hr>
     <br>
-    <div><p>{!! nl2br(e($post->body)) !!}<p></div>
- 
-
+    <div><p>{!! $post->body !!}<p></div>
+    <div class="fixed-action-btn horizontal">
+        <a href="posts/edit" class="btn-floating hoverable right btn-large blue lighten-2 wave-effect waves-green"><i class="material-icons">edit</i></a>
+        <ul>
+            <li><a href="posts/delete" class="btn-floating hoverable right red accent-1 wave-effect waves-green"><i class="material-icons">delete</i></a></li>
+        </ul>
+    </div>
+    
+    <br><br><br><br>
 @endsection()

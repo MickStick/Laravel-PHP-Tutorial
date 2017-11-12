@@ -7,3 +7,28 @@
     padding-bottom: 5mm !important;
     border-radius: 2mm !important;
 }
+
+.createForm {
+    margin-top: 2mm !important;
+}
+
+.card-alert {
+    padding-top: 1mm !important;
+    padding-bottom: 1mm !important;
+}
+
+.alert-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 1mm !important;
+    margin-bottom: 1mm !important;
+}
+
+.input-field label {
+    font-size: 20px !important;
+    color: #616161 !important;
+}
+
+.post-item p {
+    width: 70% !important;
+}

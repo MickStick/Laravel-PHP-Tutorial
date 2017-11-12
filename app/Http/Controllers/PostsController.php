@@ -26,7 +26,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        $title = "| New Post";
+        return view('posts.create')->with('title',$title);
     }
 
     /**
@@ -37,7 +38,21 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'title' => 'required',
+            'post' => 'required'
+        ]);
+
+        //Add new Post
+
+        $post = new Post;
+
+        $post->title = $request->input('title');
+        $post->body = $request->input('post');
+
+        $post->save();
+
+        return redirect('/posts')->with('success', ''.$post->title.' added.');
     }
 
     /**
