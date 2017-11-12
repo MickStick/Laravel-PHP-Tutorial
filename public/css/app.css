@@ -1,2 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css);
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css);
+.home-container {
+    margin-top: 10mm !important;
+    padding-top: 5mm !important;
+    padding-bottom: 5mm !important;
+    border-radius: 2mm !important;
+}
