@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
- {!! Form::open(['action' => 'ContactController@send', 'method' => 'POST'], ['class' => 'createForm']) !!}
+<div class="view-container grey lighten-5">
+   {!! Form::open(['action' => 'ContactController@send', 'method' => 'POST'], ['class' => 'createForm']) !!}
+        
         <h1>Contact Us</h1> 
         <div class="input-field">
             {{Form::text('name')}}
@@ -19,5 +21,7 @@
         </div>
         {{Form::submit('Submit', ['class' => 'btn blue accent-4 left waves-effect waves-light'])}}
     {!! Form::close() !!}
-    <br><br><br><br>
+    <br><br><br><br>      
+</div>
+
 @endsection

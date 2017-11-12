@@ -19,6 +19,9 @@ Route::get('/contact', 'PageController@contact');
 Route::post('/contact/send', 'ContactController@send');
 
 Route::resource('posts','PostsController');
+Route::get('/posts/posts/create', function(){
+    return redirect('/posts/create');
+});
 
 
 

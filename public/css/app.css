@@ -8,6 +8,12 @@
     border-radius: 2mm !important;
 }
 
+.view-container {
+    margin-top: 10mm !important;
+    padding: 3% 3% !important;
+    border-radius: 2mm !important;
+}
+
 .createForm {
     margin-top: 2mm !important;
 }
@@ -31,4 +37,10 @@
 
 .post-item p {
     width: 90% !important;
+}
+
+@media screen and (min-width:993px) {
+    .brand-logo {
+        margin-left: 2mm !important;
+    }
 }

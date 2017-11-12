@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container view-container grey lighten-5">
     
     {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'PUT'], ['class' => 'createForm']) !!}
         <h1>Update Post</h1> 
@@ -19,8 +19,8 @@
         <a href="/posts/{{$post->id}}" class="btn red right waves-effect waves-lights lighten-1">Cancel</a>
         <div class="clearfix"></div>
     {!! Form::close() !!}
-    <br><br><br>
-</div>
+    <br>
+</div><br><br>
 @endsection()
 
 @section('script')

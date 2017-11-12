@@ -1,7 +1,7 @@
  <nav style="position: relative">
     <ul id="dropdown1" class="dropdown-content class red lighten-5">
     <li><a href="/dashboard" class="red-text" >Dashboard</a></li>
-      <li><a href="posts/create" class="red-text" >New Post</a></li>
+      <li><a href="/posts/create" class="red-text" >New Post</a></li>
       <li>
           <a href="{{ route('logout') }}" class="red-text" 
               onclick="event.preventDefault();

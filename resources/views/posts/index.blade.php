@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section("content")
-<h3>Your Posts</h3>
+<div class="view-container grey lighten-5">
+    <h3>Your Posts</h3>
 @if(count($posts) > 0)
     <ul class="collection">
         @foreach($posts as $post)
@@ -26,5 +27,8 @@
     <p>No Post As Yet</p>
 @endif
 <a href="posts/create" class="btn-floating hoverable right large green lighten-2 wave-effect waves-green"><i class="material-icons">add</i></a>
-<br><br><br><br>
+<br><br>
+</div>
+
+
 @endsection()
