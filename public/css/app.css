@@ -39,6 +39,18 @@
     width: 90% !important;
 }
 
+.btn-small {
+    width: 26px;
+    height: 26px;
+    font-size: 1.2rem !important;
+    line-height: 26px !important;
+}
+
+.btn-small i {
+    font-size: 1.2rem !important;
+    line-height: 26px !important;
+}
+
 @media screen and (min-width:993px) {
     .brand-logo {
         margin-left: 2mm !important;

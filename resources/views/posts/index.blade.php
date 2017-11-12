@@ -16,7 +16,8 @@
                     </span>
                     <div class="truncate post-preview" style="width: 70% !important; height: 19px !important;"><p>{!! $post->body !!}</p></div>
                     <label class="secondary-content">
-                        <span><?php echo $post->created_at ?></span>  
+                        <span class="truncate"><?php echo $post->created_at ?></span> 
+                        <span>by {{$post->user->name}}</span> 
                     </label>
                 </li>
             
@@ -26,9 +27,13 @@
 @else
     <p>No Post As Yet</p>
 @endif
+@guest
+
+@else
 <a href="posts/create" class="btn-floating hoverable right large green lighten-2 wave-effect waves-green"><i class="material-icons">add</i></a>
-<br><br>
-</div>
+@endguest
+<br>
+</div><br><br>
 
 
 @endsection()

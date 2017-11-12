@@ -53,7 +53,7 @@ class PostsController extends Controller
 
         $post->save();
 
-        return redirect('/posts')->with('success', ''.$post->title.' added.');
+        return redirect('/dashboard')->with('success', ''.$post->title.' added.');
     }
 
     /**
@@ -123,6 +123,6 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->delete();
 
-        return redirect('/posts')->with('success', ''.$post->title.' deleted.');
+        return redirect('/dashboard')->with('success', ''.$post->title.' deleted.');
     }
 }
