@@ -13,7 +13,7 @@
                             <?php echo $post->title ?>
                         </a>
                     </span>
-                    <div class="truncate post-preview" style="width: 70% !important; height: 19px !important;">{!! $post->body !!}</div>
+                    <div class="truncate post-preview" style="width: 70% !important; height: 19px !important;"><p>{!! $post->body !!}</p></div>
                     <label class="secondary-content">
                         <span><?php echo $post->created_at ?></span>  
                     </label>

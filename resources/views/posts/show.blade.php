@@ -16,9 +16,14 @@
     <br>
     <div><p>{!! $post->body !!}<p></div>
     <div class="fixed-action-btn horizontal">
-        <a href="posts/edit" class="btn-floating hoverable right btn-large blue lighten-2 wave-effect waves-green"><i class="material-icons">edit</i></a>
+        <a href="{{$post->id}}/edit" class="btn-floating hoverable right btn-large blue lighten-2 wave-effect waves-green"><i class="material-icons">edit</i></a>
         <ul>
-            <li><a href="posts/delete" class="btn-floating hoverable right red accent-1 wave-effect waves-green"><i class="material-icons">delete</i></a></li>
+            <li>
+                {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'DELETE'], ['class' => 'createForm btn-floating ']) !!}
+                    <button type="submit" class="btn-floating hoverable right red accent-3 wave-effect waves-green"><i class="material-icons">delete</i></button>
+                {!! Form::close() !!}
+            </li>
+            {{--  <li><a href="{{$post->id}}" class="btn-floating hoverable right red accent-3 wave-effect waves-green"><i class="material-icons">delete</i></a></li>  --}}
         </ul>
     </div>
     

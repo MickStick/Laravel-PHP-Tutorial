@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserPwdsTable extends Migration
+class AddUserIdToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateUserPwdsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_pwds', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('uid');
-            $table->string('password');
-            $table->timestamps();
+        Schema::table('posts', function($table){
+            $table->integer('user_id');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateUserPwdsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_pwds');
+        Schema::table('posts', function($table){
+            $table->dropCol('user_id');
+        });
     }
 }

@@ -1,21 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="page-header">Contact Us</h1>
-<form action="">
-    <div class="input-field">
-        <input type="text" name="name" placeholder="John Doe">
-        <label for="name"> Your Name</label>
-    </div>
+ {!! Form::open(['action' => 'ContactController@send', 'method' => 'POST'], ['class' => 'createForm']) !!}
+        <h1>Contact Us</h1> 
+        <div class="input-field">
+            {{Form::text('name')}}
+            {{Form::label('name', 'Your Name')}}
+        </div>
 
-    <div class="input-field">
-        <input type="email" name="email" placeholder="exam@ple.com">
-        <label for="email">Email Address</label>
-    </div>
-    <br>
-    <div class="input-field">
-        <textarea name="info" id="info" class="materialize-textarea" placeholder="What's on your mind, dear child?"></textarea>
-    </div>
+         <div class="input-field">
+            {{Form::text('email', '', ['placeholder' => 'exam@ple.com'])}}
+            {{Form::label('email', 'Email Address')}}
+        </div>
 
-</form>
+        <div class="input-field">
+            {{ Form::textarea('info', '', ['class' => 'materialize-textarea','placeholder' => 'What\'s on your mind, dear child?'] )}}
+            <br>
+        </div>
+        {{Form::submit('Submit', ['class' => 'btn blue accent-4 left waves-effect waves-light'])}}
+    {!! Form::close() !!}
+    <br><br><br><br>
 @endsection

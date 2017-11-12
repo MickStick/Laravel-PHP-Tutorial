@@ -16,5 +16,12 @@ Route::get('/', 'PageController@index');
 Route::get('/about', 'PageController@about');
 
 Route::get('/contact', 'PageController@contact');
+Route::post('/contact/send', 'ContactController@send');
 
 Route::resource('posts','PostsController');
+
+
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('Dashboard');
