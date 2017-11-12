@@ -11,7 +11,7 @@
     @if($post->updated_at != $post->created_at)
         <h6><i>Updated: {{$post->updated_at}}</i></h6>
     @endif
-
+    <h6><i>Author: {{$post->user_id}}</i></h6>
     </span><hr>
     <br>
     <div><p>{!! $post->body !!}<p></div>

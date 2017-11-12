@@ -17,14 +17,22 @@ $(document).ready(() => {
 
     $('.post-item div p').addClass("truncate");
 
-    $('a').click(function() {
-        if (!$(this).hasClass("dropdown-button")) {
-            $('.progress').css({ "display": "block" });
-        }
+    // $('a').click(function() {
+    //     if (!$(this).hasClass("dropdown-button")) {
+    //         $('.progress').css({ "display": "block" });
+    //     }
 
-    });
+    // });
 
     $('form').submit(function() {
+        $('.progress').css({ "display": "block" });
+    });
+
+    window.addEventListener("beforeunload", function(e) {
+        // var confirmationMessage = "\o/";
+
+        // (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        // return confirmationMessage; //Webkit, Safari, Chrome etc.
         $('.progress').css({ "display": "block" });
     });
 

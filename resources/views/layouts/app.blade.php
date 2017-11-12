@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    <title> {{config('app.name','LPT App')}} @if(isset($title)){{$title}} @endif ?></title>
+    <title> {{config('app.name','LPT App')}} @if(isset($title)){{$title}} @endif</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
     <meta name="author" content="Mikhail Rene Shaw">

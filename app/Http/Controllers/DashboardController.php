@@ -24,7 +24,7 @@ class DashboardController extends Controller
      */
     public function index()
     {   
-        $title = "| Dashboard";//.Auth::user()->name;
+        $title = "| ".auth()->user()->name;
         return view('dashboard')->with('title',$title);
     }
 }

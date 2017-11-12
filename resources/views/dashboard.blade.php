@@ -14,6 +14,6 @@
 
     <h3>Your Blog Posts</h3>
 
-<a href="posts/create" class="btn-floating hoverable right large green lighten-2 wave-effect waves-green"><i class="material-icons">add</i></a>
+<a href="/create" class="btn-floating hoverable right large green lighten-2 wave-effect waves-green"><i class="material-icons">add</i></a>
 <br><br><br><br>
 @endsection
