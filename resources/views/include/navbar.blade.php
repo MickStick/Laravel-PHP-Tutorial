@@ -1,9 +1,9 @@
  <nav style="position: relative">
-    <ul id="dropdown1" class="dropdown-content class red lighten-5">
-    <li><a href="/dashboard" class="red-text" >Dashboard</a></li>
-      <li><a href="/posts/create" class="red-text" >New Post</a></li>
+    <ul id="dropdown1" class="dropdown-content class grey lighten-5">
+    <li><a href="/dashboard" class="black-text" >Dashboard</a></li>
+      <li><a href="/posts/create" class="black-text" >New Post</a></li>
       <li>
-          <a href="{{ route('logout') }}" class="red-text" 
+          <a href="{{ route('logout') }}" class="black-text" 
               onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
               Logout
@@ -14,7 +14,7 @@
           </form>
       </li>
     </ul>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper black">
       <a href="#!" class="brand-logo">{{config('app.name','LPT App')}}</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -64,8 +64,8 @@
                         @endguest
       </ul>
     </div>
-    <div class="progress red lighten-4 center" style="position: absolute; top: 88%;">
-            <div class="indeterminate red lighten-2"></div>
+    <div class="progress grey lighten-4 center" style="position: absolute; top: 88%;">
+            <div class="indeterminate black lighten-2"></div>
     </div>
   </nav>
           

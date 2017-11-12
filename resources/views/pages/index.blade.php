@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="red lighten-4 home-container">
+<div class="orange lighten-4 home-container">
     <h1 class="page-header center">So it's Laravel this time</h1>
     <p class="flow-Text center">Welcome To the Test Laravel Blog Application.</p>
     <div class="row">
