@@ -28,6 +28,8 @@ $(document).ready(() => {
         $('.progress').css({ "display": "block" });
     });
 
+    $('.card-alert').delay(3000).fadeOut();
+
     window.addEventListener("beforeunload", function(e) {
         // var confirmationMessage = "\o/";
 

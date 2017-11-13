@@ -8,6 +8,18 @@ use App\Post;
 class PostsController extends Controller
 {
     /**
+     * Contructor function
+     * Runs Authentication middleware to check if user is logged in.
+     * Exceptions on Blog and Show Blog pages
+     * @return void
+     */
+
+     public function __construct(){
+         $this->middleware('auth',['except' => ['index','show']]);
+     }
+
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -78,6 +90,17 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+
+        //Checking if post exists
+        if(!$post){
+            return redirect('/posts')->with('error','Well you can\'t edit what\'s not there. 🤷');            
+        }
+
+        //Checking for valid user
+        if(auth()->user()->id != $post->user_id){
+            return redirect('/posts')->with('error','Nuh-uh-uhh, you can\'t do that');
+        }
+        
         $title = "| Edit ".$post->title;
         return view('posts.edit')->with('title',$title)->with('post', $post);
     }
@@ -100,6 +123,15 @@ class PostsController extends Controller
 
         $post = Post::find($id);
         $newPost = new Post;
+        //Checking if post exists
+        if(!$post){
+            return redirect('/posts')->with('error','Well you can\'t update what\'s not there. 🤷');            
+        }
+
+        //Checking for valid user
+        if(auth()->user()->id != $post->user_id){
+            return redirect('/posts')->with('error','LOL, brah please... Gimme more credit that that.');
+        }
 
         $newPost->title = $request->input('title');
         $newPost->body = $request->input('post');
@@ -121,6 +153,15 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        //Checking if post exists
+        if(!$post){
+            return redirect('/posts')->with('error','Whoa.. Chill yo...You don\'t even exist.');            
+        }
+        //Checking for valid user
+        if(auth()->user()->id != $post->user_id){
+            return redirect('/posts')->with('error','Whoa.. Chill yo...');
+        }
+
         $post->delete();
 
         return redirect('/dashboard')->with('success', ''.$post->title.' deleted.');

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container view-container grey lighten-5">
+<div class="container view-container grey lighten-5" style="padding: 3% 3% !important">
     
     {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'PUT'], ['class' => 'createForm']) !!}
         <h1>Update Post</h1> 
